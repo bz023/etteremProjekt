@@ -16,5 +16,10 @@ namespace etteremProjekt
         {
             InitializeComponent();
         }
+
+        private void gomb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

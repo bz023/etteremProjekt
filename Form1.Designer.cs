@@ -30,30 +30,30 @@ namespace etteremProjekt
         private void InitializeComponent()
         {
             this.gbox_rendelo = new System.Windows.Forms.GroupBox();
-            this.gbox_feltet = new System.Windows.Forms.GroupBox();
-            this.gbox_etel = new System.Windows.Forms.GroupBox();
-            this.gomb = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tav = new System.Windows.Forms.TextBox();
+            this.telefon = new System.Windows.Forms.TextBox();
+            this.rendelocim = new System.Windows.Forms.TextBox();
+            this.rendelonev = new System.Windows.Forms.TextBox();
+            this.gbox_feltet = new System.Windows.Forms.GroupBox();
+            this.e_tartar = new System.Windows.Forms.CheckBox();
+            this.e_hagyma = new System.Windows.Forms.CheckBox();
+            this.e_bbq = new System.Windows.Forms.CheckBox();
+            this.e_chilli = new System.Windows.Forms.CheckBox();
+            this.e_sajt = new System.Windows.Forms.CheckBox();
+            this.gbox_etel = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.megjegyzes = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ear = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.enev = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.eid = new System.Windows.Forms.ComboBox();
+            this.gomb = new System.Windows.Forms.Button();
             this.gbox_rendelo.SuspendLayout();
             this.gbox_feltet.SuspendLayout();
             this.gbox_etel.SuspendLayout();
@@ -65,112 +65,16 @@ namespace etteremProjekt
             this.gbox_rendelo.Controls.Add(this.label3);
             this.gbox_rendelo.Controls.Add(this.label2);
             this.gbox_rendelo.Controls.Add(this.label1);
-            this.gbox_rendelo.Controls.Add(this.textBox4);
-            this.gbox_rendelo.Controls.Add(this.textBox3);
-            this.gbox_rendelo.Controls.Add(this.textBox2);
-            this.gbox_rendelo.Controls.Add(this.textBox1);
+            this.gbox_rendelo.Controls.Add(this.tav);
+            this.gbox_rendelo.Controls.Add(this.telefon);
+            this.gbox_rendelo.Controls.Add(this.rendelocim);
+            this.gbox_rendelo.Controls.Add(this.rendelonev);
             this.gbox_rendelo.Location = new System.Drawing.Point(69, 47);
             this.gbox_rendelo.Name = "gbox_rendelo";
             this.gbox_rendelo.Size = new System.Drawing.Size(658, 256);
             this.gbox_rendelo.TabIndex = 0;
             this.gbox_rendelo.TabStop = false;
             this.gbox_rendelo.Text = "Megrendelő adatai";
-            // 
-            // gbox_feltet
-            // 
-            this.gbox_feltet.Controls.Add(this.checkBox5);
-            this.gbox_feltet.Controls.Add(this.checkBox4);
-            this.gbox_feltet.Controls.Add(this.checkBox3);
-            this.gbox_feltet.Controls.Add(this.checkBox2);
-            this.gbox_feltet.Controls.Add(this.checkBox1);
-            this.gbox_feltet.Location = new System.Drawing.Point(925, 47);
-            this.gbox_feltet.Name = "gbox_feltet";
-            this.gbox_feltet.Size = new System.Drawing.Size(372, 256);
-            this.gbox_feltet.TabIndex = 1;
-            this.gbox_feltet.TabStop = false;
-            this.gbox_feltet.Text = "Extra feltétek";
-            // 
-            // gbox_etel
-            // 
-            this.gbox_etel.Controls.Add(this.label8);
-            this.gbox_etel.Controls.Add(this.textBox7);
-            this.gbox_etel.Controls.Add(this.label7);
-            this.gbox_etel.Controls.Add(this.textBox6);
-            this.gbox_etel.Controls.Add(this.label6);
-            this.gbox_etel.Controls.Add(this.textBox5);
-            this.gbox_etel.Controls.Add(this.label5);
-            this.gbox_etel.Controls.Add(this.comboBox1);
-            this.gbox_etel.Location = new System.Drawing.Point(69, 327);
-            this.gbox_etel.Name = "gbox_etel";
-            this.gbox_etel.Size = new System.Drawing.Size(806, 274);
-            this.gbox_etel.TabIndex = 2;
-            this.gbox_etel.TabStop = false;
-            this.gbox_etel.Text = "Rendelés adatai";
-            // 
-            // gomb
-            // 
-            this.gomb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.gomb.Location = new System.Drawing.Point(925, 411);
-            this.gomb.Name = "gomb";
-            this.gomb.Size = new System.Drawing.Size(372, 128);
-            this.gomb.TabIndex = 3;
-            this.gomb.Text = "Bizonylat kinyomtatása";
-            this.gomb.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(167, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(439, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(545, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Neve:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(167, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Címe:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Telefonszám:";
             // 
             // label4
             // 
@@ -181,63 +85,141 @@ namespace etteremProjekt
             this.label4.TabIndex = 7;
             this.label4.Text = "Távolság (km):";
             // 
-            // comboBox1
+            // label3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 142);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(42, 21);
-            this.comboBox1.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(436, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Telefonszám:";
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 126);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Étel ID:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(167, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Címe:";
             // 
-            // textBox5
+            // label1
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(54, 143);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(313, 20);
-            this.textBox5.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Neve:";
             // 
-            // label6
+            // tav
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Étel neve:";
+            this.tav.Location = new System.Drawing.Point(545, 106);
+            this.tav.Name = "tav";
+            this.tav.Size = new System.Drawing.Size(100, 20);
+            this.tav.TabIndex = 3;
             // 
-            // textBox6
+            // telefon
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(373, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 8;
+            this.telefon.Location = new System.Drawing.Point(439, 106);
+            this.telefon.Name = "telefon";
+            this.telefon.Size = new System.Drawing.Size(100, 20);
+            this.telefon.TabIndex = 2;
             // 
-            // label7
+            // rendelocim
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(370, 127);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Ára:";
+            this.rendelocim.Location = new System.Drawing.Point(167, 106);
+            this.rendelocim.Name = "rendelocim";
+            this.rendelocim.Size = new System.Drawing.Size(266, 20);
+            this.rendelocim.TabIndex = 1;
             // 
-            // textBox7
+            // rendelonev
             // 
-            this.textBox7.Location = new System.Drawing.Point(479, 143);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(321, 20);
-            this.textBox7.TabIndex = 8;
+            this.rendelonev.Location = new System.Drawing.Point(6, 106);
+            this.rendelonev.Name = "rendelonev";
+            this.rendelonev.Size = new System.Drawing.Size(155, 20);
+            this.rendelonev.TabIndex = 0;
+            // 
+            // gbox_feltet
+            // 
+            this.gbox_feltet.Controls.Add(this.e_tartar);
+            this.gbox_feltet.Controls.Add(this.e_hagyma);
+            this.gbox_feltet.Controls.Add(this.e_bbq);
+            this.gbox_feltet.Controls.Add(this.e_chilli);
+            this.gbox_feltet.Controls.Add(this.e_sajt);
+            this.gbox_feltet.Location = new System.Drawing.Point(925, 47);
+            this.gbox_feltet.Name = "gbox_feltet";
+            this.gbox_feltet.Size = new System.Drawing.Size(372, 256);
+            this.gbox_feltet.TabIndex = 1;
+            this.gbox_feltet.TabStop = false;
+            this.gbox_feltet.Text = "Extra feltétek";
+            // 
+            // e_tartar
+            // 
+            this.e_tartar.AutoSize = true;
+            this.e_tartar.Location = new System.Drawing.Point(47, 135);
+            this.e_tartar.Name = "e_tartar";
+            this.e_tartar.Size = new System.Drawing.Size(119, 17);
+            this.e_tartar.TabIndex = 4;
+            this.e_tartar.Text = "Tartár szósz - 200Ft";
+            this.e_tartar.UseVisualStyleBackColor = true;
+            // 
+            // e_hagyma
+            // 
+            this.e_hagyma.AutoSize = true;
+            this.e_hagyma.Location = new System.Drawing.Point(47, 158);
+            this.e_hagyma.Name = "e_hagyma";
+            this.e_hagyma.Size = new System.Drawing.Size(133, 17);
+            this.e_hagyma.TabIndex = 3;
+            this.e_hagyma.Text = "Pirított hagyma - 200Ft";
+            this.e_hagyma.UseVisualStyleBackColor = true;
+            // 
+            // e_bbq
+            // 
+            this.e_bbq.AutoSize = true;
+            this.e_bbq.Location = new System.Drawing.Point(47, 112);
+            this.e_bbq.Name = "e_bbq";
+            this.e_bbq.Size = new System.Drawing.Size(137, 17);
+            this.e_bbq.TabIndex = 2;
+            this.e_bbq.Text = "Barbecue szósz - 250Ft";
+            this.e_bbq.UseVisualStyleBackColor = true;
+            // 
+            // e_chilli
+            // 
+            this.e_chilli.AutoSize = true;
+            this.e_chilli.Location = new System.Drawing.Point(47, 89);
+            this.e_chilli.Name = "e_chilli";
+            this.e_chilli.Size = new System.Drawing.Size(112, 17);
+            this.e_chilli.TabIndex = 1;
+            this.e_chilli.Text = "Chilli szósz - 200Ft";
+            this.e_chilli.UseVisualStyleBackColor = true;
+            // 
+            // e_sajt
+            // 
+            this.e_sajt.AutoSize = true;
+            this.e_sajt.Location = new System.Drawing.Point(47, 67);
+            this.e_sajt.Name = "e_sajt";
+            this.e_sajt.Size = new System.Drawing.Size(105, 17);
+            this.e_sajt.TabIndex = 0;
+            this.e_sajt.Text = "Extra sajt - 150Ft";
+            this.e_sajt.UseVisualStyleBackColor = true;
+            // 
+            // gbox_etel
+            // 
+            this.gbox_etel.Controls.Add(this.label8);
+            this.gbox_etel.Controls.Add(this.megjegyzes);
+            this.gbox_etel.Controls.Add(this.label7);
+            this.gbox_etel.Controls.Add(this.ear);
+            this.gbox_etel.Controls.Add(this.label6);
+            this.gbox_etel.Controls.Add(this.enev);
+            this.gbox_etel.Controls.Add(this.label5);
+            this.gbox_etel.Controls.Add(this.eid);
+            this.gbox_etel.Location = new System.Drawing.Point(69, 327);
+            this.gbox_etel.Name = "gbox_etel";
+            this.gbox_etel.Size = new System.Drawing.Size(806, 274);
+            this.gbox_etel.TabIndex = 2;
+            this.gbox_etel.TabStop = false;
+            this.gbox_etel.Text = "Rendelés adatai";
             // 
             // label8
             // 
@@ -248,55 +230,74 @@ namespace etteremProjekt
             this.label8.TabIndex = 10;
             this.label8.Text = "Megjegyzés:";
             // 
-            // checkBox1
+            // megjegyzes
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(47, 67);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.megjegyzes.Location = new System.Drawing.Point(479, 143);
+            this.megjegyzes.Name = "megjegyzes";
+            this.megjegyzes.Size = new System.Drawing.Size(321, 20);
+            this.megjegyzes.TabIndex = 8;
             // 
-            // checkBox2
+            // label7
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(47, 89);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(370, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Ára:";
             // 
-            // checkBox3
+            // ear
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(47, 112);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ear.Enabled = false;
+            this.ear.Location = new System.Drawing.Point(373, 142);
+            this.ear.Name = "ear";
+            this.ear.Size = new System.Drawing.Size(100, 20);
+            this.ear.TabIndex = 8;
             // 
-            // checkBox4
+            // label6
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(47, 135);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(54, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Étel neve:";
             // 
-            // checkBox5
+            // enev
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(47, 158);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.enev.Enabled = false;
+            this.enev.Location = new System.Drawing.Point(54, 143);
+            this.enev.Name = "enev";
+            this.enev.Size = new System.Drawing.Size(313, 20);
+            this.enev.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 126);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Étel ID:";
+            // 
+            // eid
+            // 
+            this.eid.FormattingEnabled = true;
+            this.eid.Location = new System.Drawing.Point(6, 142);
+            this.eid.Name = "eid";
+            this.eid.Size = new System.Drawing.Size(42, 21);
+            this.eid.TabIndex = 0;
+            // 
+            // gomb
+            // 
+            this.gomb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.gomb.Location = new System.Drawing.Point(925, 411);
+            this.gomb.Name = "gomb";
+            this.gomb.Size = new System.Drawing.Size(372, 128);
+            this.gomb.TabIndex = 3;
+            this.gomb.Text = "Bizonylat kinyomtatása";
+            this.gomb.UseVisualStyleBackColor = true;
+            this.gomb.Click += new System.EventHandler(this.gomb_Click);
             // 
             // Form1
             // 
@@ -326,25 +327,25 @@ namespace etteremProjekt
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tav;
+        private System.Windows.Forms.TextBox telefon;
+        private System.Windows.Forms.TextBox rendelocim;
+        private System.Windows.Forms.TextBox rendelonev;
         private System.Windows.Forms.GroupBox gbox_feltet;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox e_tartar;
+        private System.Windows.Forms.CheckBox e_hagyma;
+        private System.Windows.Forms.CheckBox e_bbq;
+        private System.Windows.Forms.CheckBox e_chilli;
+        private System.Windows.Forms.CheckBox e_sajt;
         private System.Windows.Forms.GroupBox gbox_etel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox megjegyzes;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox ear;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox enev;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox eid;
         private System.Windows.Forms.Button gomb;
     }
 }
