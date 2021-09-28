@@ -30,12 +30,12 @@ namespace etteremProjekt
         private void InitializeComponent()
         {
             this.gbox_rendelo = new System.Windows.Forms.GroupBox();
+            this.tav = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tav = new System.Windows.Forms.TextBox();
-            this.telefon = new System.Windows.Forms.TextBox();
+            this.tszam = new System.Windows.Forms.TextBox();
             this.rendelocim = new System.Windows.Forms.TextBox();
             this.rendelonev = new System.Windows.Forms.TextBox();
             this.gbox_feltet = new System.Windows.Forms.GroupBox();
@@ -55,18 +55,19 @@ namespace etteremProjekt
             this.eid = new System.Windows.Forms.ComboBox();
             this.gomb = new System.Windows.Forms.Button();
             this.gbox_rendelo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tav)).BeginInit();
             this.gbox_feltet.SuspendLayout();
             this.gbox_etel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbox_rendelo
             // 
+            this.gbox_rendelo.Controls.Add(this.tav);
             this.gbox_rendelo.Controls.Add(this.label4);
             this.gbox_rendelo.Controls.Add(this.label3);
             this.gbox_rendelo.Controls.Add(this.label2);
             this.gbox_rendelo.Controls.Add(this.label1);
-            this.gbox_rendelo.Controls.Add(this.tav);
-            this.gbox_rendelo.Controls.Add(this.telefon);
+            this.gbox_rendelo.Controls.Add(this.tszam);
             this.gbox_rendelo.Controls.Add(this.rendelocim);
             this.gbox_rendelo.Controls.Add(this.rendelonev);
             this.gbox_rendelo.Location = new System.Drawing.Point(69, 47);
@@ -75,6 +76,18 @@ namespace etteremProjekt
             this.gbox_rendelo.TabIndex = 0;
             this.gbox_rendelo.TabStop = false;
             this.gbox_rendelo.Text = "Megrendelő adatai";
+            // 
+            // tav
+            // 
+            this.tav.Location = new System.Drawing.Point(545, 106);
+            this.tav.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.tav.Name = "tav";
+            this.tav.Size = new System.Drawing.Size(74, 20);
+            this.tav.TabIndex = 8;
             // 
             // label4
             // 
@@ -112,19 +125,14 @@ namespace etteremProjekt
             this.label1.TabIndex = 4;
             this.label1.Text = "Neve:";
             // 
-            // tav
+            // tszam
             // 
-            this.tav.Location = new System.Drawing.Point(545, 106);
-            this.tav.Name = "tav";
-            this.tav.Size = new System.Drawing.Size(100, 20);
-            this.tav.TabIndex = 3;
-            // 
-            // telefon
-            // 
-            this.telefon.Location = new System.Drawing.Point(439, 106);
-            this.telefon.Name = "telefon";
-            this.telefon.Size = new System.Drawing.Size(100, 20);
-            this.telefon.TabIndex = 2;
+            this.tszam.Location = new System.Drawing.Point(439, 106);
+            this.tszam.MaxLength = 11;
+            this.tszam.Name = "tszam";
+            this.tszam.Size = new System.Drawing.Size(100, 20);
+            this.tszam.TabIndex = 2;
+            this.tszam.TextChanged += new System.EventHandler(this.tszam_TextChanged);
             // 
             // rendelocim
             // 
@@ -139,6 +147,7 @@ namespace etteremProjekt
             this.rendelonev.Name = "rendelonev";
             this.rendelonev.Size = new System.Drawing.Size(155, 20);
             this.rendelonev.TabIndex = 0;
+            this.rendelonev.TextChanged += new System.EventHandler(this.rendelonev_TextChanged);
             // 
             // gbox_feltet
             // 
@@ -282,6 +291,8 @@ namespace etteremProjekt
             // 
             // eid
             // 
+            this.eid.Cursor = System.Windows.Forms.Cursors.Default;
+            this.eid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eid.FormattingEnabled = true;
             this.eid.Location = new System.Drawing.Point(6, 142);
             this.eid.Name = "eid";
@@ -312,6 +323,7 @@ namespace etteremProjekt
             this.Text = "Form1";
             this.gbox_rendelo.ResumeLayout(false);
             this.gbox_rendelo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tav)).EndInit();
             this.gbox_feltet.ResumeLayout(false);
             this.gbox_feltet.PerformLayout();
             this.gbox_etel.ResumeLayout(false);
@@ -327,8 +339,7 @@ namespace etteremProjekt
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tav;
-        private System.Windows.Forms.TextBox telefon;
+        private System.Windows.Forms.TextBox tszam;
         private System.Windows.Forms.TextBox rendelocim;
         private System.Windows.Forms.TextBox rendelonev;
         private System.Windows.Forms.GroupBox gbox_feltet;
@@ -347,6 +358,7 @@ namespace etteremProjekt
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox eid;
         private System.Windows.Forms.Button gomb;
+        private System.Windows.Forms.NumericUpDown tav;
     }
 }
 
