@@ -321,7 +321,7 @@ namespace etteremProjekt
             this.Controls.Add(this.gbox_feltet);
             this.Controls.Add(this.gbox_rendelo);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "McBooks Restaurant - Rendelés leadás";
             this.gbox_rendelo.ResumeLayout(false);
             this.gbox_rendelo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tav)).EndInit();
