@@ -53,14 +53,8 @@ namespace etteremProjekt
                 etelek.Add(new Etel(i));
             }
             int osszeg = 0;
-            string ido = DateTime.Now.ToString("HH:mm:ss");
             int kmdij = 30;
-
-            string rnev = rendelonev.Text;
-            string rcim = rendelocim.Text;
-            string telefon = tszam.Text;
             int tavolsag = int.Parse(tav.Text);
-            string megj = megjegyzes.Text;
 
             osszeg += tavolsag * kmdij;
 
@@ -79,8 +73,31 @@ namespace etteremProjekt
                     osszeg += j.ar;
                 }
             }
+            string n = string.Format("nyugta_{0:yyyy-MM-dd_HH-mm-ss}.txt",DateTime.Now);
+            StreamWriter ki = new StreamWriter(n);
 
-            MessageBox.Show("Az összeg: "+osszeg);
+
+            ki.WriteLine("Rendelés leadásának ideje: "+DateTime.Now);
+            ki.WriteLine("\n\nMegrendelő adatai:");
+            ki.WriteLine("\tNév: "+rendelonev.Text);
+            ki.WriteLine("\tCím: " + rendelocim.Text);
+            ki.WriteLine("\tTelefonszám: " + tszam.Text);
+            ki.WriteLine("\tTávolság: " + tavolsag);
+            ki.WriteLine("\n\nRendelés adatai:");
+            ki.WriteLine("\tTermék neve: " + enev.Text);
+            ki.WriteLine("\tTermék ára: " + ear.Text);
+            if (e_sajt.Checked) ki.WriteLine("\tExtra sajt ára: +150Ft");
+            if (e_chilli.Checked) ki.WriteLine("\tChilli szósz ára: +200Ft");
+            if (e_bbq.Checked) ki.WriteLine("\tBarbecue szósz ára: +250Ft");
+            if (e_tartar.Checked) ki.WriteLine("\tTartár szósz ára: +200Ft");
+            if (e_hagyma.Checked) ki.WriteLine("\tPirított hagyma ára: +200Ft");
+            ki.WriteLine("\tMegjegyzés: " + megjegyzes.Text);
+            ki.WriteLine("\n\n\nVégösszeg: "+osszeg+"Ft.");
+
+
+            ki.Flush();
+            ki.Close();
+            //MessageBox.Show("Az összeg: "+osszeg);
         }
 
         private void tszam_TextChanged(object sender, EventArgs e)
