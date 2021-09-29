@@ -19,7 +19,17 @@ namespace etteremProjekt
         {
 
             InitializeComponent();
-            
+            List<Etel> etelek = new List<Etel>();
+            foreach (var i in File.ReadAllLines("tesztbazis.txt"))
+            {
+                etelek.Add(new Etel(i));
+            }
+            foreach (var j in etelek)
+            {
+                eid.Items.Add(j.id);
+            }
+
+
         }
 
         struct Etel
@@ -48,7 +58,7 @@ namespace etteremProjekt
 
             string rnev = rendelonev.Text;
             string rcim = rendelocim.Text;
-            int telefon = int.Parse(tszam.Text);
+            string telefon = tszam.Text;
             int tavolsag = int.Parse(tav.Text);
             string megj = megjegyzes.Text;
 
@@ -61,7 +71,7 @@ namespace etteremProjekt
             if (e_hagyma.Checked) osszeg += 200;
 
 
-            string etelid = (string)eid.SelectedItem;
+            string etelid = eid.Text;
             foreach (var j in etelek)
             {
                 if (j.id == int.Parse(etelid))
@@ -69,6 +79,8 @@ namespace etteremProjekt
                     osszeg += j.ar;
                 }
             }
+
+            MessageBox.Show("Az összeg: "+osszeg);
         }
 
         private void tszam_TextChanged(object sender, EventArgs e)
