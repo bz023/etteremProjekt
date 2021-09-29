@@ -298,6 +298,7 @@ namespace etteremProjekt
             this.eid.Name = "eid";
             this.eid.Size = new System.Drawing.Size(42, 21);
             this.eid.TabIndex = 0;
+            this.eid.SelectedIndexChanged += new System.EventHandler(this.eid_SelectedIndexChanged);
             // 
             // gomb
             // 

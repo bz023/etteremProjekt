@@ -14,41 +14,61 @@ namespace etteremProjekt
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
+
             InitializeComponent();
+            
         }
 
-        private void gomb_Click(object sender, EventArgs e)
+        struct Etel
         {
+            int id, ar;
+            string nev;
+            public Etel(string s)
+            {
+                string[] db = s.Split(';');
+                id = int.Parse(db[0]);
+                nev = db[1];
+                ar = int.Parse(db[2]);
+            }
+        }
+        public void gomb_Click(object sender, EventArgs e)
+        {
+
+            List<Etel> etelek = new List<Etel>();
+            foreach (var i in File.ReadAllLines("tesztbazis.txt"))
+            {
+                etelek.Add(new Etel(i));
+            }
             int osszeg = 0;
             string ido = DateTime.Now.ToString("HH:mm:ss");
+            int kmdij = 30;
 
-            //StreamWriter ki = new StreamWriter("nyugta.txt");
-            string rnev, rcim, enev, megj; //enev : comboboxból szedi majd ki
-            int telefon, tavolsag, eid, ear; //eid, ear majd jön listából
-            bool sajt = false, chilli = false, bbq = false, tartar = false, hagyma = false;
+            string rnev = rendelonev.Text;
+            string rcim = rendelocim.Text;
+            int telefon = int.Parse(tszam.Text);
+            int tavolsag = int.Parse(tav.Text);
+            string megj = megjegyzes.Text;
 
-            rnev = rendelonev.Text;
-            rcim = rendelocim.Text;
-            megj = megjegyzes.Text;
-            telefon = int.Parse(tszam.Text);
-            tavolsag = int.Parse(tav.Text);
+            osszeg += tavolsag * kmdij;
 
-            if (e_sajt.Checked) sajt = true;
-            else sajt = false;
+            if (e_sajt.Checked) osszeg = +150;
+            if (e_chilli.Checked) osszeg += 200;
+            if (e_bbq.Checked) osszeg += 250;
+            if (e_tartar.Checked) osszeg += 200;
+            if (e_hagyma.Checked) osszeg += 200;
 
-            if (e_chilli.Checked) chilli = true;
-            else chilli = false;
 
-            if (e_bbq.Checked) bbq = true;
-            else bbq = false;
-
-            if (e_tartar.Checked) tartar = true;
-            else tartar = false;
-
-            if (e_hagyma.Checked) hagyma = true;
-            else hagyma = false;
+            string etelid = (string)eid.SelectedItem;
+            foreach (var j in etelek)
+            {
+                if (j.id == etelid)
+                {
+                    osszeg += j.ar;
+                }
+            }
         }
 
         private void tszam_TextChanged(object sender, EventArgs e)
@@ -71,6 +91,23 @@ namespace etteremProjekt
                 }
             }
 
+        }
+
+        private void eid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Etel> etelek = new List<Etel>();
+            foreach (var i in File.ReadAllLines("tesztbazis.txt"))
+            {
+                etelek.Add(new Etel(i));
+            }
+            foreach (var j in etelek)
+            {
+                if (j.id == eid.Text)
+                {
+                    enev.Text = j.nev;
+                    ear.Text = j.ar;
+                }
+            }
         }
     }
 }
