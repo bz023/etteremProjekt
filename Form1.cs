@@ -24,8 +24,8 @@ namespace etteremProjekt
 
         struct Etel
         {
-            int id, ar;
-            string nev;
+            public int id, ar;
+            public string nev;
             public Etel(string s)
             {
                 string[] db = s.Split(';');
@@ -64,7 +64,7 @@ namespace etteremProjekt
             string etelid = (string)eid.SelectedItem;
             foreach (var j in etelek)
             {
-                if (j.id == etelid)
+                if (j.id == int.Parse(etelid))
                 {
                     osszeg += j.ar;
                 }
@@ -102,10 +102,10 @@ namespace etteremProjekt
             }
             foreach (var j in etelek)
             {
-                if (j.id == eid.Text)
+                if (j.id == int.Parse(eid.Text))
                 {
                     enev.Text = j.nev;
-                    ear.Text = j.ar;
+                    ear.Text = Convert.ToString(j.ar);
                 }
             }
         }
