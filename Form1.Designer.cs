@@ -307,7 +307,7 @@ namespace etteremProjekt
             this.gomb.FlatAppearance.BorderSize = 2;
             this.gomb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gomb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.gomb.Location = new System.Drawing.Point(849, 386);
+            this.gomb.Location = new System.Drawing.Point(849, 404);
             this.gomb.Name = "gomb";
             this.gomb.Size = new System.Drawing.Size(230, 128);
             this.gomb.TabIndex = 3;
