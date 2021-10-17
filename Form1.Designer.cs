@@ -70,16 +70,16 @@ namespace etteremProjekt
             this.gbox_rendelo.Controls.Add(this.tszam);
             this.gbox_rendelo.Controls.Add(this.rendelocim);
             this.gbox_rendelo.Controls.Add(this.rendelonev);
-            this.gbox_rendelo.Location = new System.Drawing.Point(69, 47);
+            this.gbox_rendelo.Location = new System.Drawing.Point(18, 12);
             this.gbox_rendelo.Name = "gbox_rendelo";
-            this.gbox_rendelo.Size = new System.Drawing.Size(658, 256);
+            this.gbox_rendelo.Size = new System.Drawing.Size(806, 175);
             this.gbox_rendelo.TabIndex = 0;
             this.gbox_rendelo.TabStop = false;
             this.gbox_rendelo.Text = "Megrendelő adatai";
             // 
             // tav
             // 
-            this.tav.Location = new System.Drawing.Point(545, 106);
+            this.tav.Location = new System.Drawing.Point(726, 87);
             this.tav.Maximum = new decimal(new int[] {
             50,
             0,
@@ -92,7 +92,7 @@ namespace etteremProjekt
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(542, 90);
+            this.label4.Location = new System.Drawing.Point(723, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 7;
@@ -101,7 +101,7 @@ namespace etteremProjekt
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 90);
+            this.label3.Location = new System.Drawing.Point(614, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 6;
@@ -110,7 +110,7 @@ namespace etteremProjekt
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(167, 90);
+            this.label2.Location = new System.Drawing.Point(183, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace etteremProjekt
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 90);
+            this.label1.Location = new System.Drawing.Point(19, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 4;
@@ -127,7 +127,7 @@ namespace etteremProjekt
             // 
             // tszam
             // 
-            this.tszam.Location = new System.Drawing.Point(439, 106);
+            this.tszam.Location = new System.Drawing.Point(617, 86);
             this.tszam.MaxLength = 11;
             this.tszam.Name = "tszam";
             this.tszam.Size = new System.Drawing.Size(100, 20);
@@ -136,14 +136,14 @@ namespace etteremProjekt
             // 
             // rendelocim
             // 
-            this.rendelocim.Location = new System.Drawing.Point(167, 106);
+            this.rendelocim.Location = new System.Drawing.Point(183, 87);
             this.rendelocim.Name = "rendelocim";
-            this.rendelocim.Size = new System.Drawing.Size(266, 20);
+            this.rendelocim.Size = new System.Drawing.Size(428, 20);
             this.rendelocim.TabIndex = 1;
             // 
             // rendelonev
             // 
-            this.rendelonev.Location = new System.Drawing.Point(6, 106);
+            this.rendelonev.Location = new System.Drawing.Point(22, 87);
             this.rendelonev.Name = "rendelonev";
             this.rendelonev.Size = new System.Drawing.Size(155, 20);
             this.rendelonev.TabIndex = 0;
@@ -156,9 +156,9 @@ namespace etteremProjekt
             this.gbox_feltet.Controls.Add(this.e_bbq);
             this.gbox_feltet.Controls.Add(this.e_chilli);
             this.gbox_feltet.Controls.Add(this.e_sajt);
-            this.gbox_feltet.Location = new System.Drawing.Point(925, 47);
+            this.gbox_feltet.Location = new System.Drawing.Point(849, 12);
             this.gbox_feltet.Name = "gbox_feltet";
-            this.gbox_feltet.Size = new System.Drawing.Size(372, 256);
+            this.gbox_feltet.Size = new System.Drawing.Size(230, 278);
             this.gbox_feltet.TabIndex = 1;
             this.gbox_feltet.TabStop = false;
             this.gbox_feltet.Text = "Extra feltétek";
@@ -166,7 +166,7 @@ namespace etteremProjekt
             // e_tartar
             // 
             this.e_tartar.AutoSize = true;
-            this.e_tartar.Location = new System.Drawing.Point(47, 135);
+            this.e_tartar.Location = new System.Drawing.Point(40, 145);
             this.e_tartar.Name = "e_tartar";
             this.e_tartar.Size = new System.Drawing.Size(119, 17);
             this.e_tartar.TabIndex = 4;
@@ -176,7 +176,7 @@ namespace etteremProjekt
             // e_hagyma
             // 
             this.e_hagyma.AutoSize = true;
-            this.e_hagyma.Location = new System.Drawing.Point(47, 158);
+            this.e_hagyma.Location = new System.Drawing.Point(40, 168);
             this.e_hagyma.Name = "e_hagyma";
             this.e_hagyma.Size = new System.Drawing.Size(133, 17);
             this.e_hagyma.TabIndex = 3;
@@ -186,7 +186,7 @@ namespace etteremProjekt
             // e_bbq
             // 
             this.e_bbq.AutoSize = true;
-            this.e_bbq.Location = new System.Drawing.Point(47, 112);
+            this.e_bbq.Location = new System.Drawing.Point(40, 122);
             this.e_bbq.Name = "e_bbq";
             this.e_bbq.Size = new System.Drawing.Size(137, 17);
             this.e_bbq.TabIndex = 2;
@@ -196,7 +196,7 @@ namespace etteremProjekt
             // e_chilli
             // 
             this.e_chilli.AutoSize = true;
-            this.e_chilli.Location = new System.Drawing.Point(47, 89);
+            this.e_chilli.Location = new System.Drawing.Point(40, 99);
             this.e_chilli.Name = "e_chilli";
             this.e_chilli.Size = new System.Drawing.Size(112, 17);
             this.e_chilli.TabIndex = 1;
@@ -206,7 +206,7 @@ namespace etteremProjekt
             // e_sajt
             // 
             this.e_sajt.AutoSize = true;
-            this.e_sajt.Location = new System.Drawing.Point(47, 67);
+            this.e_sajt.Location = new System.Drawing.Point(40, 77);
             this.e_sajt.Name = "e_sajt";
             this.e_sajt.Size = new System.Drawing.Size(105, 17);
             this.e_sajt.TabIndex = 0;
@@ -223,9 +223,9 @@ namespace etteremProjekt
             this.gbox_etel.Controls.Add(this.enev);
             this.gbox_etel.Controls.Add(this.label5);
             this.gbox_etel.Controls.Add(this.eid);
-            this.gbox_etel.Location = new System.Drawing.Point(69, 327);
+            this.gbox_etel.Location = new System.Drawing.Point(18, 376);
             this.gbox_etel.Name = "gbox_etel";
-            this.gbox_etel.Size = new System.Drawing.Size(806, 274);
+            this.gbox_etel.Size = new System.Drawing.Size(806, 175);
             this.gbox_etel.TabIndex = 2;
             this.gbox_etel.TabStop = false;
             this.gbox_etel.Text = "Rendelés adatai";
@@ -233,7 +233,7 @@ namespace etteremProjekt
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(480, 126);
+            this.label8.Location = new System.Drawing.Point(480, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 13);
             this.label8.TabIndex = 10;
@@ -241,7 +241,7 @@ namespace etteremProjekt
             // 
             // megjegyzes
             // 
-            this.megjegyzes.Location = new System.Drawing.Point(479, 143);
+            this.megjegyzes.Location = new System.Drawing.Point(479, 87);
             this.megjegyzes.Name = "megjegyzes";
             this.megjegyzes.Size = new System.Drawing.Size(321, 20);
             this.megjegyzes.TabIndex = 8;
@@ -249,7 +249,7 @@ namespace etteremProjekt
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(370, 127);
+            this.label7.Location = new System.Drawing.Point(370, 71);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 13);
             this.label7.TabIndex = 8;
@@ -258,7 +258,7 @@ namespace etteremProjekt
             // ear
             // 
             this.ear.Enabled = false;
-            this.ear.Location = new System.Drawing.Point(373, 142);
+            this.ear.Location = new System.Drawing.Point(373, 86);
             this.ear.Name = "ear";
             this.ear.Size = new System.Drawing.Size(100, 20);
             this.ear.TabIndex = 8;
@@ -266,7 +266,7 @@ namespace etteremProjekt
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 127);
+            this.label6.Location = new System.Drawing.Point(54, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 9;
@@ -275,7 +275,7 @@ namespace etteremProjekt
             // enev
             // 
             this.enev.Enabled = false;
-            this.enev.Location = new System.Drawing.Point(54, 143);
+            this.enev.Location = new System.Drawing.Point(54, 87);
             this.enev.Name = "enev";
             this.enev.Size = new System.Drawing.Size(313, 20);
             this.enev.TabIndex = 8;
@@ -283,7 +283,7 @@ namespace etteremProjekt
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 126);
+            this.label5.Location = new System.Drawing.Point(6, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 8;
@@ -294,7 +294,7 @@ namespace etteremProjekt
             this.eid.Cursor = System.Windows.Forms.Cursors.Default;
             this.eid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eid.FormattingEnabled = true;
-            this.eid.Location = new System.Drawing.Point(6, 142);
+            this.eid.Location = new System.Drawing.Point(6, 86);
             this.eid.Name = "eid";
             this.eid.Size = new System.Drawing.Size(42, 21);
             this.eid.TabIndex = 0;
@@ -302,25 +302,37 @@ namespace etteremProjekt
             // 
             // gomb
             // 
+            this.gomb.BackColor = System.Drawing.Color.RosyBrown;
+            this.gomb.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gomb.FlatAppearance.BorderSize = 2;
+            this.gomb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gomb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.gomb.Location = new System.Drawing.Point(925, 411);
+            this.gomb.Location = new System.Drawing.Point(849, 386);
             this.gomb.Name = "gomb";
-            this.gomb.Size = new System.Drawing.Size(372, 128);
+            this.gomb.Size = new System.Drawing.Size(230, 128);
             this.gomb.TabIndex = 3;
             this.gomb.Text = "Bizonylat kinyomtatása";
-            this.gomb.UseVisualStyleBackColor = true;
+            this.gomb.UseVisualStyleBackColor = false;
             this.gomb.Click += new System.EventHandler(this.gomb_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1385, 613);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(128)))), ((int)(((byte)(116)))));
+            this.BackgroundImage = global::etteremProjekt.Properties.Resources.logo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1118, 566);
             this.Controls.Add(this.gomb);
             this.Controls.Add(this.gbox_etel);
             this.Controls.Add(this.gbox_feltet);
             this.Controls.Add(this.gbox_rendelo);
+            this.DoubleBuffered = true;
+            this.MaximumSize = new System.Drawing.Size(1134, 605);
+            this.MinimumSize = new System.Drawing.Size(1134, 605);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "McBooks Restaurant - Rendelés leadás";
             this.gbox_rendelo.ResumeLayout(false);
             this.gbox_rendelo.PerformLayout();

@@ -52,7 +52,6 @@ namespace etteremProjekt
 
 
 
-
             if (osztjominden)
             {
                 int osszeg = 0;
