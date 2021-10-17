@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -52,54 +46,86 @@ namespace etteremProjekt
             {
                 etelek.Add(new Etel(i));
             }
-            int osszeg = 0;
-            int kmdij = 30;
-            int tavolsag = int.Parse(tav.Text);
-
-            osszeg += tavolsag * kmdij;
-
-            if (e_sajt.Checked) osszeg = +150;
-            if (e_chilli.Checked) osszeg += 200;
-            if (e_bbq.Checked) osszeg += 250;
-            if (e_tartar.Checked) osszeg += 200;
-            if (e_hagyma.Checked) osszeg += 200;
+            bool osztjominden = false;
+            if (rendelonev.Text != "" && rendelocim.Text != "" && tszam.Text != "" && enev.Text != "" && ear.Text != "" && megjegyzes.Text != "") osztjominden = true;
+            else osztjominden = false;
 
 
-            string etelid = eid.Text;
-            foreach (var j in etelek)
+
+
+            if (osztjominden)
             {
-                if (j.id == int.Parse(etelid))
+                int osszeg = 0;
+                int kmdij = 30;
+                int tavolsag = int.Parse(tav.Text);
+
+                osszeg += tavolsag * kmdij;
+
+                if (e_sajt.Checked) osszeg = +150;
+                if (e_chilli.Checked) osszeg += 200;
+                if (e_bbq.Checked) osszeg += 250;
+                if (e_tartar.Checked) osszeg += 200;
+                if (e_hagyma.Checked) osszeg += 200;
+
+
+                string etelid = eid.Text;
+                foreach (var j in etelek)
                 {
-                    osszeg += j.ar;
+                    if (j.id == int.Parse(etelid))
+                    {
+                        osszeg += j.ar;
+                    }
                 }
+                string n = string.Format("nyugta_{0:yyyy-MM-dd_HH-mm-ss}.txt", DateTime.Now);
+                StreamWriter ki = new StreamWriter(n);
+
+
+                ki.WriteLine("Rendelés leadásának ideje: " + DateTime.Now);
+                ki.WriteLine("\n\nMegrendelő adatai:");
+                ki.WriteLine("\tNév: " + rendelonev.Text);
+                ki.WriteLine("\tCím: " + rendelocim.Text);
+                ki.WriteLine("\tTelefonszám: " + tszam.Text);
+                ki.WriteLine("\tTávolság: " + tavolsag);
+                ki.WriteLine("\n\nRendelés adatai:");
+                ki.WriteLine("\tTermék neve: " + enev.Text);
+                ki.WriteLine("\tTermék ára: " + ear.Text);
+                if (e_sajt.Checked) ki.WriteLine("\tExtra sajt ára: +150Ft");
+                if (e_chilli.Checked) ki.WriteLine("\tChilli szósz ára: +200Ft");
+                if (e_bbq.Checked) ki.WriteLine("\tBarbecue szósz ára: +250Ft");
+                if (e_tartar.Checked) ki.WriteLine("\tTartár szósz ára: +200Ft");
+                if (e_hagyma.Checked) ki.WriteLine("\tPirított hagyma ára: +200Ft");
+                ki.WriteLine("\tMegjegyzés: " + megjegyzes.Text);
+                ki.WriteLine("\n\n\nVégösszeg: " + osszeg + "Ft.");
+
+
+                ki.Flush();
+                ki.Close();
+                MessageBox.Show("Sikeres rendelés! Végösszeg: " + osszeg);
+                clearData();
             }
-            string n = string.Format("nyugta_{0:yyyy-MM-dd_HH-mm-ss}.txt",DateTime.Now);
-            StreamWriter ki = new StreamWriter(n);
+            else
+            {
+                MessageBox.Show("Hiba a felvitt adatokban!");
+                clearData();
+            }
 
-
-            ki.WriteLine("Rendelés leadásának ideje: "+DateTime.Now);
-            ki.WriteLine("\n\nMegrendelő adatai:");
-            ki.WriteLine("\tNév: "+rendelonev.Text);
-            ki.WriteLine("\tCím: " + rendelocim.Text);
-            ki.WriteLine("\tTelefonszám: " + tszam.Text);
-            ki.WriteLine("\tTávolság: " + tavolsag);
-            ki.WriteLine("\n\nRendelés adatai:");
-            ki.WriteLine("\tTermék neve: " + enev.Text);
-            ki.WriteLine("\tTermék ára: " + ear.Text);
-            if (e_sajt.Checked) ki.WriteLine("\tExtra sajt ára: +150Ft");
-            if (e_chilli.Checked) ki.WriteLine("\tChilli szósz ára: +200Ft");
-            if (e_bbq.Checked) ki.WriteLine("\tBarbecue szósz ára: +250Ft");
-            if (e_tartar.Checked) ki.WriteLine("\tTartár szósz ára: +200Ft");
-            if (e_hagyma.Checked) ki.WriteLine("\tPirított hagyma ára: +200Ft");
-            ki.WriteLine("\tMegjegyzés: " + megjegyzes.Text);
-            ki.WriteLine("\n\n\nVégösszeg: "+osszeg+"Ft.");
-
-
-            ki.Flush();
-            ki.Close();
-            //MessageBox.Show("Az összeg: "+osszeg);
         }
-
+        private void clearData()
+        {
+            rendelonev.Clear();
+            rendelocim.Clear();
+            tszam.Clear();
+            tav.Value = 0;
+            enev.Clear();
+            ear.Clear();
+            eid.SelectedIndex = 0;
+            e_sajt.Checked = false;
+            e_chilli.Checked = false;
+            e_bbq.Checked = false;
+            e_tartar.Checked = false;
+            e_hagyma.Checked = false;
+            megjegyzes.Clear();
+        }
         private void tszam_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(tszam.Text, "[^0-9]"))
