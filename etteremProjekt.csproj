@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="logo.png" />
+    <Content Include="logo3.ico" />
     <Content Include="tesztbazis.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -29,6 +29,7 @@ namespace etteremProjekt
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gbox_rendelo = new System.Windows.Forms.GroupBox();
             this.tav = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -329,6 +330,7 @@ namespace etteremProjekt
             this.Controls.Add(this.gbox_feltet);
             this.Controls.Add(this.gbox_rendelo);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1134, 605);
             this.MinimumSize = new System.Drawing.Size(1134, 605);
             this.Name = "Form1";
