@@ -1,3 +1,18 @@
-﻿1; Gyros tál; 1500
-2; Gyros pita; 1200
-3; Gyros kifli; 1100
+﻿1;Tavaszi zöldségleves; 1580
+2;Börzsönyi Gombaleves Csipetkével;1580
+3;Karfiolleves;1400
+4;Burgonyaleves;1350
+5;Akácmézes szamócakrémleves almával;1980
+6;Zöldborsóleves;1600
+7;Fahéjas almaleves kandírozott naranccsal;2100
+8;Sonkás-kukoricás pizza; 1320
+9;Hawaii pizza;1400
+10;Mexikói pizza;1440
+11;Spartacus pizza;1660
+12;Kertész pizza;1580
+13;Nagy Gyrostál;2040
+14;Kis Gyrostál;1610
+15;Zsebes Gyros;1340
+16;Kerti Mix Saláta;840
+17;Kukoricasaláta;630
+18;Vándorsaláta;1175
